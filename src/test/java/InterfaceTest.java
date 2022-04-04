@@ -23,7 +23,7 @@ public class InterfaceTest {
     }
 
     @Test
-    public void loginTest () {
+    public void loginTest() {
         interfaceList.goLogin();
         loginPage.inputLogin(ConfProperties.getProperty("email"));
         loginPage.inputPasswd(ConfProperties.getProperty("password"));
@@ -32,8 +32,28 @@ public class InterfaceTest {
         Assert.assertEquals(interfaceList.getUserName(), ConfProperties.getProperty("uname"));
     }
 
+    @Test
+    public void searchTest() {
+        String questionText = "asdasd";
+        interfaceList.inputQuestion(questionText);
+        interfaceList.searchQuestion();
+        Assert.assertNotNull(interfaceList.getSearchHeader());
+        Assert.assertEquals("Results for " + questionText, interfaceList.getQuestionResultText());
+    }
+
+    @Test
+    public void logoutTest() {
+        interfaceList.goToProfile();
+        interfaceList.switchSite();
+        interfaceList.logOut();
+        interfaceList.logOutAccept();
+        Assert.assertNotNull(interfaceList.getLogInButton());
+    }
+
+
+
     @AfterClass
-    public static void tearDown(){
+    public static void tearDown() {
         firefoxDriver.quit();
     }
 }

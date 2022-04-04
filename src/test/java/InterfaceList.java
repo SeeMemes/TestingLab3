@@ -14,23 +14,32 @@ public class InterfaceList {
         this.webDriver = webDriver;
     }
 
-    @FindBy(xpath = "//input[@aria-label=\"Search\"]")
+    @FindBy(xpath = "//input[@aria-label='Search']")
     private WebElement searchElement;
 
     @FindBy(xpath = "//a[text()='Log in']")
     private WebElement logInButton;
 
-    @FindBy(xpath = "//a[text()='log out']")
+    @FindBy(xpath = "//a[@href='https://stackoverflow.com/users/logout' and @class='js-gps-track']")
     private WebElement logOutButton;
 
-    @FindBy(xpath = "//a[@aria-label=\"Site switcher\"]")
+    @FindBy(xpath = "//a[@aria-label='Site switcher']")
     private WebElement siteSwitcherButton;
 
-    @FindBy(xpath = "//a[@class=\"s-topbar--item s-user-card s-user-card__small m0 px12 js-gps-track\"]")
+    @FindBy(xpath = "//a[@class='s-topbar--item s-user-card s-user-card__small m0 px12 js-gps-track']")
     private WebElement toProfile;
 
-    @FindBy(xpath = "//div[@class=\"flex--item mb12 fs-headline2 lh-xs\"]")
+    @FindBy(xpath = "//div[@class='flex--item mb12 fs-headline2 lh-xs']")
     private WebElement uName;
+
+    @FindBy(xpath = "//button[text() = 'Log out']")
+    private WebElement logOutAcceptButton;
+
+    @FindBy(xpath = "//h1[text() = 'Search Results'")
+    private WebElement searchHeader;
+
+    @FindBy(xpath = "//div[@class = 'mb8']")
+    private WebElement questionResult;
 
     public void goToProfile() {
         toProfile.click();
@@ -41,6 +50,7 @@ public class InterfaceList {
     }
 
     public void inputQuestion(String q) {
+        searchElement.clear();
         searchElement.sendKeys(q);
     }
 
@@ -49,7 +59,11 @@ public class InterfaceList {
     }
 
     public void logOut() {
-        logInButton.click();
+        logOutButton.click();
+    }
+
+    public void logOutAccept() {
+        logOutAcceptButton.click();
     }
 
     public void switchSite() {
@@ -58,5 +72,17 @@ public class InterfaceList {
 
     public void goLogin() {
         logInButton.click();
+    }
+
+    public WebElement getLogInButton() {
+        return logInButton;
+    }
+
+    public WebElement getSearchHeader() {
+        return searchHeader;
+    }
+
+    public String getQuestionResultText() {
+        return questionResult.getText();
     }
 }
