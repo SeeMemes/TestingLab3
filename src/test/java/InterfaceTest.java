@@ -42,13 +42,23 @@ public class InterfaceTest {
     }
 
     @Test
+    public void questionAskTest() {
+        interfaceList.questionMenu();
+        interfaceList.askQuestion();
+        interfaceList.clickReviewQuestion();
+        Assert.assertTrue(interfaceList.headerAllertMessage().contains("missing"));
+        Assert.assertTrue(interfaceList.bodyAllertMessage().contains("missing"));
+        Assert.assertTrue(interfaceList.tagAllertMessage().contains("at least one tag"));
+    }
+
+    /*@Test
     public void logoutTest() {
         interfaceList.goToProfile();
         interfaceList.switchSite();
         interfaceList.logOut();
         interfaceList.logOutAccept();
         Assert.assertNotNull(interfaceList.getLogInButton());
-    }
+    }*/
 
 
 
