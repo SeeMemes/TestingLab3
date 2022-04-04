@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="InterfaceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-04-04T13:22:33" hostname="LAPTOP-KSO7VHEJ" time="6.141">
+<testsuite name="InterfaceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-04-04T13:29:52" hostname="LAPTOP-KSO7VHEJ" time="7.872">
   <properties/>
-  <testcase name="loginTest()" classname="InterfaceTest" time="3.764"/>
-  <testcase name="searchTest()" classname="InterfaceTest" time="0.687"/>
-  <testcase name="questionAskTest()" classname="InterfaceTest" time="1.689"/>
+  <testcase name="loginTest()" classname="InterfaceTest" time="4.695"/>
+  <testcase name="searchTest()" classname="InterfaceTest" time="0.886"/>
+  <testcase name="questionAskTest()" classname="InterfaceTest" time="2.288"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-1649078546487	geckodriver	INFO	Listening on 127.0.0.1:63174
-1649078547727	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60135" "-no-remote" "-profile" "C:\\Users\\Elite\\AppData\\Local\\Temp\\rust_mozprofileAeTORd"
-1649078548142	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elite\\AppData\\Local\\Temp\\rust_mozprofileAeTORd\\search.json.mozlz4", (void 0)))
-DevTools listening on ws://localhost:60135/devtools/browser/dfc3567e-2d76-40e1-b887-34bf73907d22
-1649078550778	Marionette	INFO	Listening on port 59807
-1649078550930	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-апр 04, 2022 4:22:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1649078982477	geckodriver	INFO	Listening on 127.0.0.1:55561
+1649078984328	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55767" "-no-remote" "-profile" "C:\\Users\\Elite\\AppData\\Local\\Temp\\rust_mozprofileYpMaxg"
+1649078985082	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Elite\\AppData\\Local\\Temp\\rust_mozprofileYpMaxg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55767/devtools/browser/92624f35-6e4a-4162-b9ef-e2e34cfa501e
+1649078989576	Marionette	INFO	Listening on port 60225
+1649078989695	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+апр 04, 2022 4:29:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://stackoverflow.com"
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://stackoverflow.com"
 JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-1649078554312	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
-TimedPromise@chrome://remote/content/marionette/sync.js:220:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://stackoverflow.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://stackoverflow.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://stackoverflow.com"
 JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://stackoverflow.com"
